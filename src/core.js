@@ -113,6 +113,7 @@ require("./internals/legend.js");
 require("./internals/title.js");
 require("./internals/clip.js");
 require("./internals/region.js");
+require("./internals/event.js");
 require("./interactions/drag.js");
 require("./internals/selection.js");
 require("./interactions/subchart.js");

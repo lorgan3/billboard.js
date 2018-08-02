@@ -1008,6 +1008,38 @@ export default class Options {
 			data_empty_label_text: "",
 
 			/**
+			 * Set the events shown on the chart.
+			 * @name events
+			 * @memberOf Options
+			 * @type {Array}
+			 * @default []
+			 * @example
+			 * events: [{
+			 * 		id: "event1"
+			 * 		start: 1,
+			 * 		end: 2,
+			 * 		icon: undefined,
+			 * 		text: "A",
+			 * 		class: "highlight",
+			 * 		orient: "top"
+			 * }]
+			 */
+			events: [],
+
+			/**
+			 * Set a callback for when an event is clicked.
+			 * @name event.onclick
+			 * @memberOf Options
+			 * @type {Function}
+			 * @default undefined
+			 * @example
+			 * event: {
+			 * 		onclick: function(d, i) { ... }
+			 * }
+			 */
+			event_onclick: undefined,
+
+			/**
 			 * Set subchart options
 			 * @name subchart
 			 * @memberOf Options
@@ -2824,7 +2856,7 @@ export default class Options {
 				bottom: 0,
 				left: 0
 			},
-			title_position: "top-center"
+			title_position: "top-center",
 		};
 	}
 }

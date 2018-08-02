@@ -385,7 +385,7 @@ export default class ChartInternal {
 	}
 
 	initChartElements() {
-		["Pie", "Bar", "Line", "Arc", "Gauge", "Bubble", "Radar", "Text"].forEach(v => {
+		["Pie", "Bar", "Line", "Arc", "Gauge", "Bubble", "Radar", "Text", "Event"].forEach(v => {
 			const method = `init${v}`;
 
 			this[method] && this[method]();
@@ -723,6 +723,9 @@ export default class ChartInternal {
 		// rect for regions
 		$$.updateRegion(duration);
 
+		// events
+		$$.updateEvent(duration);
+
 		// bars
 		$$.updateBar(durationForExit);
 
@@ -800,6 +803,7 @@ export default class ChartInternal {
 			$$.redrawCircle(cx, cy, isTransition, flow),
 			$$.redrawText(xForText, yForText, options.flow, isTransition),
 			$$.redrawRegion(isTransition),
+			$$.redrawEvent(isTransition),
 			$$.redrawGrid(isTransition)
 		];
 

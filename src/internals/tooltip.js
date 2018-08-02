@@ -144,9 +144,13 @@ extend(ChartInternal.prototype, {
 					`<span style="background-color:${bgcolor}"></span>`;
 
 
-				text += `${name}</td><td class="value">${
-					isAreaRangeType ? `<b>Mid:</b> ${value} <b>High:</b> ${hiValue} <b>Low:</b> ${loValue}` : value
-				}</td></tr>`;
+				text += `${name}</td>`;
+
+				if (!isNaN(value)) {
+					text += `<td class="value">${
+						isAreaRangeType ? `<b>Mid:</b> ${value} <b>High:</b> ${hiValue} <b>Low:</b> ${loValue}` : value
+					}</td></tr>`;
+				}
 			}
 		}
 

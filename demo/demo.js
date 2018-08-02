@@ -357,6 +357,31 @@ var demos = {
 				}
 			}
 		},
+		LineChartWithEvents: {
+			options: {
+				padding: {
+					top: 20
+				},
+				data: {
+					columns: [
+						["data1", 30, 200, 100, 400, 150, 250]
+					]
+				},
+				events: [{
+					id: "event-1",
+					start: 1,
+					end: 2,
+					text: "A"
+				}, {
+					id: "event-2",
+					start: 3,
+					icon: "https://picsum.photos/200/200"
+				}],
+				event: {
+					onclick: (d, i) => console.log(`Clicked event ${i} (${d.id})`)
+				}
+			}
+		},
 		MultipleXYLineChart: {
 			options: {
 				data: {

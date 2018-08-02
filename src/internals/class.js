@@ -89,6 +89,10 @@ extend(ChartInternal.prototype, {
 		return `${this.generateClass(CLASS.region, i)} ${"class" in d ? d.class : ""}`;
 	},
 
+	classChartEvent(d, i) {
+		return `${this.generateClass(CLASS.event, i)} ${"class" in d ? d.class : ""}`;
+	},
+
 	classEvent(d) {
 		return this.generateClass(CLASS.eventRect, d.index);
 	},

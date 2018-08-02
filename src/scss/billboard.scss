@@ -119,6 +119,12 @@
   fill-opacity: .1;
 }
 
+/*-- Events --*/
+.bb-event text {
+	z-index: 1;
+	text-anchor: middle;
+}
+
 /*-- Brush --*/
 .bb-brush .extent {
   fill-opacity: .1;
